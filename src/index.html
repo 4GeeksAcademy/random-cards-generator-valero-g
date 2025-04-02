@@ -4,32 +4,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href= "style.css">
+    <title>Random cards generator- Valero Gaudo</title>
   </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+  <body onload="generateRandomCard()">
+    <!-- Write your HTML code here, you can delete everything withing the body tags ♦ ♥ ♠ ♣ -->
+    <button class = "btn-barajar" onclick = "generateRandomCard()">Barajar ahora</button>
+    <div class = "card">
+       <div class = "top">
+        <p class = "heart">♥</p><p class = "clubs">♣</p><p class = "spade">♠</p><p class = "diamond">♦</p>
+       </div>
+       <div class = number>
+          <p class = numberValue></p>
+       </div>
+       <div class = "bottom">
+        <p class = "heart">♥</p><p class = "clubs">♣</p><p class = "spade">♠</p><p class = "diamond">♦</p>
+       </div>
     </div>
-
+    <div class = "timer">
+      <label><input type= "checkbox" onchange="periodicRandomCard()" class="checkbox" name= "timer">&nbsp;Haz click para barajar automáticamente cada&nbsp;<input type= "number" onchange="periodicRandomCard()" name="inputTime" value="10" min = "0" max = "60" step="1">&nbsp;segundos</label>
+    </div>
+    <div class="card-size">
+      <label>Introduce la altura de la carta en porcentaje:&nbsp;<input type="number" name = "inputHeight" value ="50" max ="100" min = "30" step = "1"><button class= "btn-height" onclick="adjustHeight()">Ajustar Altura</button> </label>
+      <label>Introduce la anchura de la carta en porcentaje:&nbsp;<input type="number" name = "inputWidth" value ="20" max ="100" min = "5" step = "1"><button class= "btn-width" onclick="adjustWidth()">Ajustar Anchura</button> </label>
+    </div>
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

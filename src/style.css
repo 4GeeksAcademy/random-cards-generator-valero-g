@@ -1,5 +1,114 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+
 
 body{
-    background: white;
+    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+}
+
+.card{
+    background-color: white;
+    height: 50%;
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.number{
+    align-self: center;
+    margin:0px;
+
+}
+
+.number p{
+    margin:0px;
+}
+
+.top{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    display:flex;
+    align-self:self-start;
+}
+
+.top p{
+    margin:0px;
+}
+
+
+.bottom{
+    align-self:self-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    display:flex;
+    transform: scaleY(-1);
+}
+
+.bottom p{
+    margin:0px;
+}
+
+
+.heart {
+    margin: 0px;
+    color:red;
+    display: none;
+}
+
+
+.spade{
+    margin: 0px;
+    color: black;
+    display: none;
+}
+
+.clubs{
+    margin: 0px;
+    color:black;
+    display: none;
+}
+
+
+
+.diamond{
+    margin: 0px;
+    color:red;
+    display: none;
+}
+
+.btn-barajar{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 40px;
+}
+
+.timer{
+    margin:25px;
+    font-size: 2em;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    padding:20px;
+}
+
+.card-size{
+    margin:25px;
+    font-size: 2em;
+    display:flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    padding:20px;
 }
